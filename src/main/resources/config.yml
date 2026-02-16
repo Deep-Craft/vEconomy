@@ -1,0 +1,45 @@
+# Database Configuration
+# Options for preferred_db: MariaDB, MySQL
+# Make sure to create the database 'vEconomy' before starting the server.
+database:
+  preferred_db: MariaDB
+  host: "localhost"
+  port: 3306
+  database: "vEconomy"
+  username: "root"
+  password: ""
+  pool_size: 10
+  connection_timeout: 5000
+
+# System Logging
+# If true, records transactions and heavy operations to the console/file.
+# Recommended: true for debugging, false for production if spammy.
+logging: true
+
+# Currency Definitions
+# You can create as many as you want. The key is the internal currency ID.
+# start_balance: Initial balance for new players.
+# symbol: Visual symbol.
+# display_name: Displayed name.
+# format: Java DecimalFormat pattern.
+currencies:
+  money:
+    display_name: "Dólares"
+    symbol: "$"
+    start_balance: 1000.0
+    format: "#,##0.00"
+  cash:
+    display_name: "Cash"
+    symbol: "✪"
+    start_balance: 0.0
+    format: "#,##0"
+
+# Simple Messages
+# Supports '&' for colors.
+# Placeholders available depending on context: %player%, %symbol%, %amount%.
+messages:
+  prefix: "&8[&bvEconomy&8] "
+  no_permission: "&cVocê não tem permissão."
+  balance_updated: "&aSaldo de %player% definido para %symbol%%amount%."
+  target_not_found: "&cJogador não encontrado."
+  reload: "&aConfigurações recarregadas e conexões reiniciadas."
