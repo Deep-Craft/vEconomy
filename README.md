@@ -1,5 +1,5 @@
 <div align="center">
-<h1>💰 vEconomy</h1>
+<h1>vEconomy</h1>
 <p><i>High-performance multi-currency economy system for Minecraft servers.</i></p>
 
 <div>
